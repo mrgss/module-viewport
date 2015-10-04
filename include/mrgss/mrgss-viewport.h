@@ -15,7 +15,9 @@ extern "C" {
 #endif
 
     void mrgss_init_viewport(mrb_state *mrb);
-	
+    
+    mrb_value mrgss_viewport_new(mrb_state *mrb, mrb_int x, mrb_int y, mrb_int w, mrb_int h);
+    
 #ifdef __cplusplus
 }
 #endif
