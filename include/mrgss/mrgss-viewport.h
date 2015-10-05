@@ -13,7 +13,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+    void mrb_mrgss_viewport_gem_init(mrb_state *mrb);
     void mrgss_init_viewport(mrb_state *mrb);
     
     mrb_value mrgss_viewport_new(mrb_state *mrb, mrb_int x, mrb_int y, mrb_int w, mrb_int h);
