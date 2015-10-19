@@ -113,9 +113,10 @@ void viewport_add_children(mrb_state *mrb, mrb_value viewport, mrb_value child) 
 }
 
 void viewport_remove_children(mrb_state *mrb, mrb_value viewport, mrb_value child) {
+    int i = 0;
     mrb_value children = mrb_iv_get(mrb, viewport, mrb_intern_lit(mrb, "children"));
     mrb_int size = mrb_ary_len(mrb, children);
-    for (int i = size - 1; i >= 0; --i) {
+    for (i = size - 1; i >= 0; --i) {
         mrb_value drawable = mrb_ary_entry(children, i);
         if (mrb_obj_equal(mrb, drawable, child)) {
             drawable = mrb_nil_value();
